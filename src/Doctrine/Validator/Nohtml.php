@@ -27,10 +27,10 @@
  * @license     http://www.opensource.org/licenses/lgpl-license.php LGPL
  * @link        www.phpdoctrine.org
  * @since       1.0
- * @version     
+ * @version
  * @author      Sune Jensen <sj@sunet.dk>
  */
-class Doctrine_Validator_Nohtml
+class Doctrine_Validator_Nohtml extends Doctrine_Validator_Driver
 {
     /**
      * checks for html in string
@@ -40,7 +40,7 @@ class Doctrine_Validator_Nohtml
      */
     public function validate($value)
     {
-        
+
         $test_value = strip_tags($value, $this->args);
 
         if ($test_value != $value) {
