@@ -40,7 +40,6 @@ class Doctrine_Validator_Nohtml extends Doctrine_Validator_Driver
      */
     public function validate($value)
     {
-
         $test_value = strip_tags($value, $this->args);
 
         if ($test_value != $value) {
